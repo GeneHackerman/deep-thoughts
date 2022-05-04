@@ -8,7 +8,7 @@ const resolvers = {
         // if username exists, returns object if not, then empty
         // object is then passed through find() method. if data, looks up specific username
         // if no data, returns all thoughts
-
+// 21.2.5 me does not test properly on apollo*****
         me: async(parent, args) => {
             if (context.user) {
             const userData = await User.findOne({ _id: context.user._id })
